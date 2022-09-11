@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application <Form></Form></title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        .container{
+            border: 2px solid black;
+            width: 700px;
+            height: 600px;
+            margin-top: 100px;
+            margin-left: 400px;
+            background-color: aqua;
+        }
+    
+         #heading{
+            text-transform: uppercase;
+            font-size: 40px;
+            font-weight: 200;
+            
+            padding-left: 200px;
+            margin-top: 20px;
+            margin-right: 50px;
+        
+
+        }
+
+        span{
+            font-size: 25px;
+            /* margin-right: 400px; */
+        }
+        .container{
+            display: grid;
+            
+            
+            
+
+        }
+        .section{
+            position: absolute;
+            margin-top: 100px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .form-controls{
+            margin-left: 30px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            grid-gap: 8px;
+        }
+        input{
+            padding: 5px ;
+            font-size: 15px;
+        }
+        .textarea {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            
+        }
+        button{
+            width: 150px;
+            font-size: 20px;
+            border-radius: 5px;
+
+        }
+        select{
+            padding-top: 6px;
+            padding-bottom: 6px;
+            padding-left: 3px;
+        
+        }
+        button{
+            background-color: red;
+            
+        }
+        button:hover{
+            transform: scale(1.5);
+        }
+        input:hover{
+            background-color: rgb(226, 130, 130);
+        }
+        select:hover{
+            background-color: rgb(226, 130, 130);
+        }
+        label{
+            font-weight: bold;
+        }
+        input:hover{
+            font-weight: bold;
+            
+        }
+     @media screen and (max-width:757px) {
+            .container{
+                background-color: rgb(140, 140, 177);
+                display: grid;
+                grid-template-columns: 300px;
+                height: 1000px;
+            }
+            @media screen and (max-width:757px) 
+            {
+                .section{
+                    background-color: rgb(140, 140, 177);
+                    grid-template-columns: 300px;
+                    display: grid;
+                    margin-top: 200px;
+                }
+                
+            } 
+            .textarea{
+                display: grid;
+                grid-column: 1 / span 1 ;
+                grid-template-columns: 280px;
+                background-color: rgb(140, 140, 177);
+
+            }
+            
+        }
+
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <span id="heading" >job Application <span>(web)</span></span>
+        <div class="section">
+
+        
+
+        <div class="form-controls">
+            <label for="myname">MyName</label>
+            <input type="text" name="" id="myname" placeholder="Enter your First Name">
+        </div>
+
+        <div class="form-controls">
+            <label for="lastname">Last Name</label>
+            <input type="text" name="" id="lastname" placeholder="Enter your Last Name">
+        </div>
+        <div class="form-controls">
+            <label for="myemail">My Email</label>
+            <input type="text" name="" id="myemail" placeholder="Enter your Email">
+        </div>
+        <div class="form-controls job">
+            <label for="job">Job Role</label>
+            <select name="" id="job">
+                <option value="#">Frontend Developer</option>
+                <option value="#">Backend Developer</option>
+                <option value="#">Full Developer</option>
+                <option value="#"> Ui& Ux</option>
+            </select>
+        </div>
+         <div class="form-controls textarea">
+            <label for="my address"></label>
+
+            <textarea name="" id="my addres" cols="30" rows="10" placeholder="Enter your Addres"></textarea>
+        </div> 
+        <div class="form-controls">
+            <label for="city">Select City</label>
+            <select name="" id="city" >
+                <option value="fsd" id="#" >Faisalabad</option>
+                <option value="fsd" id="#" >Karchi</option>
+                <option value="fsd" id="#" >Islamabad</option>
+                <option value="fsd" id="#" >Lahore</option>
+                <option value="fsd" id="#" >Rawalpindy</option>
+
+            </select>
+            </div>
+
+            <div class="form-controls">
+            <label for="date">Date</label>
+            <input type="date" name="" id="date" >
+
+                    
+        </div>
+
+            <div class="form-controls">
+            <label for="file">Enter your Cv</label>
+            <input type="file" name="" id="file" >
+
+                    
+        </div>
+        <div class="form-controls">
+            Apply Now
+            <button>Apply Now</button>
+        </div>
+
+    </div>
+    </div>
+    
+</body>
+</html>
